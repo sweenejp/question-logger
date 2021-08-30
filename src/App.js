@@ -118,9 +118,9 @@ class App extends React.Component {
     const displayLog =
       localStorage.getItem("displayLog") === "true" ? true : false;
     const displayHelp =
-      localStorage.getItem("displayHelp") === "true" ? true : false;
+      localStorage.getItem("displayHelp") === "false" ? false : true;
     const themeIsLight =
-      localStorage.getItem("themeIsLight") === "true" ? true : false;
+      localStorage.getItem("themeIsLight") === "false" ? false : true;
     this.setState({
       fields: fields,
       currentKey: currentKey,
@@ -136,7 +136,6 @@ class App extends React.Component {
     localStorage.setItem("displayLog", this.state.displayLog);
     localStorage.setItem("displayHelp", this.state.displayHelp);
     localStorage.setItem("themeIsLight", this.state.themeIsLight);
-    console.log(localStorage);
   }
 
   render() {
